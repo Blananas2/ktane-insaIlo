@@ -17,7 +17,7 @@ public class InsaIloScript : MonoBehaviour {
     public TextMesh[] Texts;
 
     private int chosenIx, anIx, answer;
-    private string[] words = { "who", "where", "when", "three", "four", "six", "seven", "ten", "child", "worm", "forest", "root", "flower", "bone", "egg", "horn", "tail", "feather", "tooth", "tongue", "knee", "wing", "belly", "neck", "rain", "river", "sea", "ice", "smoke", "ash", "night", "day", "year", "old", "smooth", "dry", "near", "module", "bomb", "pink", "maroon", "orange", "green", "purple", "alcohol", "blind", "deaf", "love", "gray", "rich", "poor", "glitch", "saliva", "mother", "father", "soda", "second", "year", "eternity", "baby", "basement", "twin", "dinosaur", "banana", "dumb", "button", "welcome", "sorry", "please", "friend", "enemy", "soldier", "vehicle", "city", "hunter", "speaker", "leader", "sentence", "calculator", "movie", "core", "others", "nothing", "snow", "first", "second", "fifth" };
+    private string[] words = { "who", "where", "when", "three", "four", "six", "seven", "ten", "child", "worm", "forest", "root", "flower", "bone", "egg", "horn", "tail", "feather", "tooth", "tongue", "knee", "wing", "belly", "neck", "rain", "river", "sea", "ice", "smoke", "ash", "night", "day", "year", "old", "smooth", "dry", "near", "module", "bomb", "pink", "maroon", "orange", "green", "purple", "alcohol", "blind", "deaf", "love", "gray", "rich", "poor", "glitch", "saliva", "mother", "father", "soda", "second", "year", "eternity", "baby", "basement", "twin", "dinosaur", "banana", "dumb", "button", "welcome", "sorry", "please", "friend", "enemy", "soldier", "vehicle", "city", "hunter", "speaker", "leader", "sentence", "calculator", "movie", "core", "others", "nothing", "snow", "first", "fifth" };
     private const float row = 0.125f;
     private const float col = 0.0625f;
     private float Lrow, Lcol, Rrow, Rcol;
@@ -118,7 +118,7 @@ public class InsaIloScript : MonoBehaviour {
             case 72: Lrow=row*1; Lcol=col*12; Rrow=row*1; Rcol=col*8; forLogging = "tomo tawa"; break;
             case 73: Lrow=row*5; Lcol=col*15; Rrow=row*1; Rcol=col*12; forLogging = "ma tomo"; break;
             case 74: Lrow=row*6; Lcol=col*1; Rrow=row*7; Rcol=col*3; forLogging = "jan alasa"; break;
-            case 75: Lrow=row*6; Lcol=col*1; Rrow=row*4; Rcol=col*0; forLogging = "jan kalama"; break;
+            case 75: Lrow=row*6; Lcol=col*1; Rrow=row*6; Rcol=col*5; forLogging = "jan kalama"; break;
             case 76: Lrow=row*6; Lcol=col*1; Rrow=row*5; Rcol=col*3; forLogging = "jan lawa"; break;
             case 77: Lrow=row*3; Lcol=col*1; Rrow=row*4; Rcol=col*11; forLogging = "nimi mute"; break;
             case 78: Lrow=row*4; Lcol=col*12; Rrow=row*7; Rcol=col*14; forLogging = "nanpa ilo"; break;
@@ -128,8 +128,7 @@ public class InsaIloScript : MonoBehaviour {
             case 82: Lrow=row*7; Lcol=col*4; Rrow=row*7; Rcol=col*2; forLogging = "ale ala"; break;
             case 83: Lrow=row*1; Lcol=col*7; Rrow=row*5; Rcol=col*5; forLogging = "telo lete"; break;
             case 84: Lrow=row*0; Lcol=col*2; Rrow=row*4; Rcol=col*12; forLogging = "wan nanpa"; break;
-            case 85: Lrow=row*1; Lcol=col*13; Rrow=row*4; Rcol=col*12; forLogging = "tu nanpa"; break;
-            case 86: Lrow=row*5; Lcol=col*12; Rrow=row*4; Rcol=col*12; forLogging = "luka nanpa"; break;
+            case 85: Lrow=row*5; Lcol=col*12; Rrow=row*4; Rcol=col*12; forLogging = "luka nanpa"; break;
             
         }
         Screens[0].GetComponent<MeshRenderer>().material.mainTextureOffset = new Vector2(Lcol, Lrow);
