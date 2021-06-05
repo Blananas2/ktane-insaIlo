@@ -41,7 +41,7 @@ public class InsaIloScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        chosenIx = UnityEngine.Random.Range(0, 86);
+        chosenIx = UnityEngine.Random.Range(0, words.Count());
         chosenWord = words[chosenIx];
         
         SetSymbols(chosenIx);
@@ -51,7 +51,7 @@ public class InsaIloScript : MonoBehaviour {
         onButtons.Add(chosenWord);
         while (onButtons.Count() <= 5) {
             chegg = false;
-            anIx = UnityEngine.Random.Range(0, 87);
+            anIx = UnityEngine.Random.Range(0, words.Count());
             for (int w = 0; w < onButtons.Count(); w++) {
                 if (words[anIx] == onButtons[w]) {
                     chegg = true;
