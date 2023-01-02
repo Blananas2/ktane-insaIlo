@@ -17,7 +17,7 @@ public class InsaIloScript : MonoBehaviour {
     public TextMesh[] Texts;
 
     private int chosenIx, anIx, answer;
-    private string[] words = { "who", "where", "when", "three", "four", "six", "seven", "ten", "worm", "forest", "root", "flower", "bone", "egg", "horn", "tail", "feather", "tooth", "tongue", "knee", "wing", "belly", "neck", "rain", "river", "sea", "ice", "smoke", "ash", "night", "day", "year", "old", "smooth", "dry", "near", "module", "bomb", "pink", "maroon", "orange", "green", "purple", "alcohol", "blind", "deaf", "love", "gray", "rich", "poor", "glitch", "saliva", "mother", "father", "soda", "second", "year", "eternity", "baby", "basement", "twin", "dinosaur", "banana", "dumb", "button", "welcome", "sorry", "please", "friend", "enemy", "soldier", "vehicle", "city", "hunter", "speaker", "leader", "sentence", "calculator", "movie", "core", "others", "nothing", "snow", "first", "fifth" };
+    private string[] words = { "who", "where", "when", "three", "four", "six", "seven", "ten", "worm", "forest", "root", "flower", "bone", "egg", "horn", "tail", "feather", "tooth", "tongue", "knee", "wing", "belly", "neck", "rain", "river", "sea", "ice", "smoke", "ash", "night", "day", "year", "old", "smooth", "dry", "near", "module", "bomb", "pink", "maroon", "orange", "green", "purple", "alcohol", "blind", "deaf", "love", "gray", "rich", "poor", "glitch", "saliva", "mother", "father", "soda", "second", "year", "eternity", "baby", "basement", "twin", "dinosaur", "banana", "dumb", "button", "welcome", "sorry", "please", "friend", "enemy", "soldier", "vehicle", "city", "hunter", "speaker", "leader", "sentence", "calculator", "movie", "others", "nothing", "snow", "first", "fifth" };
     private const float row = 0.125f;
     private const float col = 0.0625f;
     private float Lrow, Lcol, Rrow, Rcol;
@@ -183,12 +183,11 @@ public class InsaIloScript : MonoBehaviour {
             case 76: Lrow=row*3; Lcol=col*1; Rrow=row*4; Rcol=col*11; forLogging = "nimi mute"; break; //sentence
             case 77: Lrow=row*4; Lcol=col*12; Rrow=row*7; Rcol=col*14; forLogging = "nanpa ilo"; break; //calculator
             case 78: Lrow=row*2; Lcol=col*15; Rrow=row*1; Rcol=col*8; forLogging = "sitelen tawa"; break; //movie
-            case 79: Lrow=row*1; Lcol=col*4; Rrow=row*3; Rcol=col*2; forLogging = "supa noka"; break; //core
-            case 80: Lrow=row*2; Lcol=col*13; Rrow=row*7; Rcol=col*2; forLogging = "sina ala"; break; //others
-            case 81: Lrow=row*7; Lcol=col*4; Rrow=row*7; Rcol=col*2; forLogging = "ale ala"; break; //nothing
-            case 82: Lrow=row*1; Lcol=col*9; Rrow=row*5; Rcol=col*5; forLogging = "telo lete"; break; //snow
-            case 83: Lrow=row*0; Lcol=col*2; Rrow=row*4; Rcol=col*12; forLogging = "wan nanpa"; break; //first
-            case 84: Lrow=row*5; Lcol=col*12; Rrow=row*4; Rcol=col*12; forLogging = "luka nanpa"; break; //fifth
+            case 79: Lrow=row*2; Lcol=col*13; Rrow=row*7; Rcol=col*2; forLogging = "sina ala"; break; //others
+            case 80: Lrow=row*7; Lcol=col*4; Rrow=row*7; Rcol=col*2; forLogging = "ale ala"; break; //nothing
+            case 81: Lrow=row*1; Lcol=col*9; Rrow=row*5; Rcol=col*5; forLogging = "telo lete"; break; //snow
+            case 82: Lrow=row*0; Lcol=col*2; Rrow=row*4; Rcol=col*12; forLogging = "wan nanpa"; break; //first
+            case 83: Lrow=row*5; Lcol=col*12; Rrow=row*4; Rcol=col*12; forLogging = "luka nanpa"; break; //fifth
         }
     }
 
