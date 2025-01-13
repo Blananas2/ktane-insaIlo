@@ -197,42 +197,12 @@ public class InsaIloScript : MonoBehaviour {
     #pragma warning restore 414
     IEnumerator ProcessTwitchCommand(string command)
     {
-        string[] parameters = command.Split(' ');
-        if (Regex.IsMatch(parameters[0], @"^\s*press\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant) || Regex.IsMatch(parameters[0], @"^\s*button\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant) || Regex.IsMatch(parameters[0], @"^\s*pos\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
-        {
-            if (parameters.Length == 2)
-            {
-                if (inputIsValid(parameters[1]))
-                {
-                    yield return null;
-                    if (parameters[1].Equals("1"))
-                    {
-                        Buttons[0].OnInteract();
-                    }
-                    else if (parameters[1].Equals("2"))
-                    {
-                        Buttons[1].OnInteract();
-                    }
-                    else if (parameters[1].Equals("3"))
-                    {
-                        Buttons[2].OnInteract();
-                    }
-                    else if (parameters[1].Equals("4"))
-                    {
-                        Buttons[3].OnInteract();
-                    }
-                    else if (parameters[1].Equals("5"))
-                    {
-                        Buttons[4].OnInteract();
-                    }
-                    else if (parameters[1].Equals("6"))
-                    {
-                        Buttons[5].OnInteract();
-                    }
-                }
-            }
+        Match m = Regex.Match(command, @"^\s*press\s+(?<num>[123456])\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+        if (!m.Success)
             yield break;
-        }
+        yield return null;
+        var ix = int.Parse(m.Groups["num"].Value) - 1;
+        Buttons[ix].OnInteract();
     }
 
     IEnumerator TwitchHandleForcedSolve()
