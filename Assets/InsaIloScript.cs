@@ -54,8 +54,6 @@ public class InsaIloScript : MonoBehaviour {
         "nena ala smooth",
         "telo ala dry",
         "lon poka near",
-        "insa ilo module",
-        "moli ilo bomb",
         "loje walo pink",
         "loje pimeja maroon",
         "loje jelo orange",
@@ -64,19 +62,12 @@ public class InsaIloScript : MonoBehaviour {
         "telo nasa alcohol",
         "lukin ala blind",
         "kute ala deaf",
-        "pilin jan love",
         "walo pimeja gray",
         "mani ale rich",
         "mani ala poor",
-        "pipi ilo glitch",
         "telo uta saliva",
-        "meli mama mother",
-        "mije mama father",
-        "telo pimeja soda",
         "tenpo lili second",
-        "tenpo suli year",
         "tenpo ale eternity",
-        "jan lili baby",
         "tomo noka basement",
         "jan tu twin",
         "akesi suli dinosaur",
@@ -85,7 +76,6 @@ public class InsaIloScript : MonoBehaviour {
         "ilo nena button",
         "kama pona welcome",
         "mi pakala sorry",
-        "mi wile please",
         "jan pona friend",
         "jan ike enemy",
         "jan utala soldier",
@@ -95,12 +85,18 @@ public class InsaIloScript : MonoBehaviour {
         "jan kalama speaker",
         "jan lawa leader",
         "nimi mute sentence",
-        "nanpa ilo calculator",
         "sitelen tawa movie",
-        "sina ala others",
-        "ale ala nothing",
-        "wan nanpa first",
-        "luka nanpa fifth"
+        "ilo pakala bomb", //these were changed/adjusted with the help of jan Emik, others were removed
+        "mama meli mother",
+        "mama mije father",
+        "telo suwi soda",
+        "tenpo sike year",
+        "jan lili minor",
+        "sina pona thanks",
+        "ilo nanpa computer",
+        "ona mute others",
+        "nanpa wan first",
+        "nanpa luka fifth"
     };
     private string chosenWord;
     private List<string> onButtons = new List<string> {};
@@ -144,10 +140,10 @@ public class InsaIloScript : MonoBehaviour {
         for (int m = 0; m < 6; m++) { //note: this needs to be changed on a case-by-case basis currently, should change later
             Texts[m].text = onButtons[m];
             switch (onButtons[m]) {
-                case "dinosaur": case "speaker":
+                case "dinosaur": case "speaker": 
                     Texts[m].transform.localScale = new Vector3(0.065f, 0.075f, 0.1f);
                 break;
-                case "basement": case "calculator": case "sentence": case "welcome":
+                case "basement": case "computer": case "sentence": case "welcome":
                     Texts[m].transform.localScale = new Vector3(0.055f, 0.075f, 0.1f);
                 break;
                 default: break;
